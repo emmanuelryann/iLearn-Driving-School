@@ -20,7 +20,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="services" id="services">
+    <section className="services reveal" id="services">
       <div className="services__inner container">
         <p className="services__label">What We Offer</p>
         <h2 className="services__title">We Provide Service For You</h2>

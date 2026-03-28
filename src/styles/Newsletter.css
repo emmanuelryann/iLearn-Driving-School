@@ -73,8 +73,10 @@
   transition: background-color 0.3s ease;
 }
 
-.newsletter__btn:hover {
-  background: var(--clr-dark-2);
+@media (hover: hover) {
+  .newsletter__btn:hover {
+    background: var(--clr-dark-2);
+  }
 }
 
 /* ===== RESPONSIVE ===== */

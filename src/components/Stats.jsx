@@ -1,15 +1,15 @@
 import '../styles/Stats.css';
 
 const stats = [
-  { icon: 'fa-solid fa-user-graduate', count: '15,000+', label: 'Students' },
-  { icon: 'fa-solid fa-chalkboard-user', count: '1,200+', label: 'Classes' },
-  { icon: 'fa-solid fa-code-branch', count: '50+', label: 'Branches' },
-  { icon: 'fa-solid fa-earth-americas', count: '20+', label: 'Countries' },
+  { icon: 'fa-solid fa-user-graduate', count: '5,000+', label: 'Students' },
+  { icon: 'fa-solid fa-chalkboard-user', count: '150+', label: 'Instructors' },
+  { icon: 'fa-solid fa-code-branch', count: '5+', label: 'Branches' },
+  { icon: 'fa-solid fa-earth-americas', count: '3+', label: 'Countries' },
 ];
 
 export default function Stats() {
   return (
-    <section className="stats">
+    <section className="stats reveal">
       <div className="stats__inner container">
         {stats.map((stat) => (
           <div className="stats__item" key={stat.label}>

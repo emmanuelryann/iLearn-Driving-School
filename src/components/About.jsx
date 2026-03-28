@@ -2,7 +2,7 @@ import '../styles/About.css';
 
 export default function About() {
   return (
-    <section className="about" id="about">
+    <section className="about reveal" id="about">
       <div className="about__inner container">
         <div className="about__image-wrapper">
           <img
@@ -11,13 +11,13 @@ export default function About() {
             className="about__image"
           />
           <div className="about__badge">
-            <span className="about__badge-number">25+</span>
+            <span className="about__badge-number">10+</span>
             <span className="about__badge-text">Years Experience</span>
           </div>
         </div>
 
         <div className="about__content">
-          <p className="about__label">Start Your Driving Course</p>
+          <p className="about__label">About Us</p>
           <h2 className="about__title">
             Drive Best Driving School In The World
           </h2>

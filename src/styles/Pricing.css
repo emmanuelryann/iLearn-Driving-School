@@ -42,9 +42,11 @@
   border: 0.0625rem solid var(--clr-gray-light);
 }
 
-.pricing__card:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+@media (hover: hover) {
+  .pricing__card:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+  }
 }
 
 .pricing__card--highlighted {
@@ -55,8 +57,10 @@
   box-shadow: 0 0.5rem 2.5rem rgba(247, 148, 29, 0.35);
 }
 
-.pricing__card--highlighted:hover {
-  transform: scale(1.05) translateY(-0.4rem);
+@media (hover: hover) {
+  .pricing__card--highlighted:hover {
+    transform: scale(1.05) translateY(-0.4rem);
+  }
 }
 
 .pricing__card-name {
@@ -140,22 +144,26 @@
   background: transparent;
 }
 
-.pricing__btn:hover {
-  background: var(--clr-primary);
-  color: var(--clr-white);
-  transform: translateY(-0.15rem);
+@media (hover: hover) {
+  .pricing__btn:hover {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    transform: translateY(-0.15rem);
+  }
 }
 
 .pricing__btn--filled {
   background: var(--clr-white);
   color: var(--clr-primary);
-  border-color: var(--clr-white);
+  /* border-color: var(--clr-white); */
 }
 
-.pricing__btn--filled:hover {
-  background: var(--clr-dark);
-  color: var(--clr-white);
-  border-color: var(--clr-dark);
+@media (hover: hover) {
+  .pricing__btn--filled:hover {
+    background: var(--clr-dark);
+    color: var(--clr-white);
+    /* border-color: var(--clr-dark); */
+  }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -168,7 +176,9 @@
     transform: none;
   }
 
-  .pricing__card--highlighted:hover {
-    transform: translateY(-0.4rem);
+  @media (hover: hover) {
+    .pricing__card--highlighted:hover {
+      transform: translateY(-0.4rem);
+    }
   }
 }

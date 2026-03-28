@@ -105,9 +105,11 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.about__btn:hover {
-  background-color: var(--clr-primary-dark);
-  transform: translateY(-0.15rem);
+@media (hover: hover) {
+  .about__btn:hover {
+    background-color: var(--clr-primary-dark);
+    transform: translateY(-0.15rem);
+  }
 }
 
 /* ===== RESPONSIVE ===== */

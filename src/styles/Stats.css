@@ -45,6 +45,8 @@
 @media (max-width: 48em) {
   .stats__inner {
     justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .stats__item {

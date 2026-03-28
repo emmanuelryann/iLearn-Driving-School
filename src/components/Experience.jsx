@@ -2,7 +2,7 @@ import '../styles/Experience.css';
 
 export default function Experience() {
   return (
-    <section className="experience">
+    <section className="experience reveal">
       <div className="experience__overlay"></div>
       <div className="experience__inner container">
         <div className="experience__content">
@@ -17,15 +17,15 @@ export default function Experience() {
 
           <div className="experience__stats">
             <div className="experience__stat">
-              <span className="experience__stat-number">25+</span>
+              <span className="experience__stat-number">10+</span>
               <span className="experience__stat-label">Years Experience</span>
             </div>
             <div className="experience__stat">
-              <span className="experience__stat-number">120+</span>
-              <span className="experience__stat-label">Qualified Teachers</span>
+              <span className="experience__stat-number">150+</span>
+              <span className="experience__stat-label">Qualified Instructors</span>
             </div>
             <div className="experience__stat">
-              <span className="experience__stat-number">15K+</span>
+              <span className="experience__stat-number">5K+</span>
               <span className="experience__stat-label">Happy Students</span>
             </div>
           </div>

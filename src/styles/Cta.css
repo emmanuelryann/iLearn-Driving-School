@@ -77,9 +77,11 @@
   color: var(--clr-white);
 }
 
-.cta__btn--primary:hover {
-  background: var(--clr-dark-2);
-  transform: translateY(-0.15rem);
+@media (hover: hover) {
+  .cta__btn--primary:hover {
+    background: var(--clr-dark-2);
+    transform: translateY(-0.15rem);
+  }
 }
 
 .cta__btn--outline {
@@ -88,10 +90,12 @@
   border: 0.125rem solid var(--clr-white);
 }
 
-.cta__btn--outline:hover {
-  background: var(--clr-white);
-  color: var(--clr-primary);
-  transform: translateY(-0.15rem);
+@media (hover: hover) {
+  .cta__btn--outline:hover {
+    background: var(--clr-white);
+    color: var(--clr-primary);
+    transform: translateY(-0.15rem);
+  }
 }
 
 /* ===== RESPONSIVE ===== */

@@ -82,9 +82,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience__play-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 0.75rem rgba(247, 148, 29, 0.2);
+@media (hover: hover) {
+  .experience__play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 0.75rem rgba(247, 148, 29, 0.2);
+  }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -98,7 +100,7 @@
     justify-content: center;
   }
 
-  .experience__play {
+  /* .experience__play {
     order: -1;
-  }
+  } */
 }

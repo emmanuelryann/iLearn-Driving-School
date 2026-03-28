@@ -16,12 +16,12 @@ const supportLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer reveal">
       <div className="footer__inner container">
         <div className="footer__col footer__col--brand">
           <a href="#home" className="footer__logo">
             <i className="fa-solid fa-steering-wheel footer__logo-icon"></i>
-            <span className="footer__logo-text">DRIVE</span>
+            <span className="footer__logo-text">iLEARN</span>
           </a>
           <p className="footer__desc">
             Your trusted partner in learning to drive. We provide professional
@@ -62,11 +62,11 @@ export default function Footer() {
           <ul className="footer__contact">
             <li>
               <i className="fa-solid fa-location-dot"></i>
-              <span>123 Drive Street, New York, NY 10001</span>
+              <span>76 Boundary Road East Legon</span>
             </li>
             <li>
               <i className="fa-solid fa-phone"></i>
-              <span>+1 (555) 123-4567</span>
+              <span>+233 (0) 24 298 8559</span>
             </li>
             <li>
               <i className="fa-solid fa-envelope"></i>

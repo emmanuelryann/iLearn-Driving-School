@@ -26,10 +26,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="testimonials">
+    <section className="testimonials reveal">
       <div className="testimonials__inner container">
         <p className="testimonials__label">Testimonials</p>
-        <h2 className="testimonials__title">What Saying Students Feedback</h2>
+        <h2 className="testimonials__title">What Students Are Saying</h2>
 
         <div className="testimonials__grid">
           {testimonials.map((t) => (

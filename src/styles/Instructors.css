@@ -38,9 +38,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.instructors__card:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+@media (hover: hover) {
+  .instructors__card:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+  }
 }
 
 .instructors__card-img-wrap {
@@ -55,8 +57,10 @@
   transition: transform 0.4s ease;
 }
 
-.instructors__card:hover .instructors__card-img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .instructors__card:hover .instructors__card-img {
+    transform: scale(1.05);
+  }
 }
 
 .instructors__card-body {
@@ -95,9 +99,11 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.instructors__card-socials a:hover {
-  background: var(--clr-primary);
-  color: var(--clr-white);
+@media (hover: hover) {
+  .instructors__card-socials a:hover {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+  }
 }
 
 /* ===== RESPONSIVE ===== */

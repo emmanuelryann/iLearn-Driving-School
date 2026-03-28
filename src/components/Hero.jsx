@@ -2,10 +2,10 @@ import '../styles/Hero.css';
 
 export default function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero reveal" id="home">
       <div className="hero__overlay"></div>
       <div className="hero__content container">
-        <p className="hero__subtitle">Welcome to iLearn Driving School</p>
+        <p className="hero__subtitle">&mdash; Improve Your Driving Skills</p>
         <h1 className="hero__title">
           Learn to Drive<br />with Confidence
         </h1>
@@ -31,9 +31,9 @@ export default function Hero() {
             <label className="hero__search-label">Location</label>
             <select className="hero__search-select">
               <option>Select Location</option>
-              <option>New York</option>
-              <option>Los Angeles</option>
-              <option>Chicago</option>
+              <option>Accra</option>
+              <option>Tema</option>
+              <option>Kumasi</option>
             </select>
           </div>
           <div className="hero__search-group">
@@ -41,7 +41,8 @@ export default function Hero() {
             <input type="date" className="hero__search-input" />
           </div>
           <button className="hero__search-btn">
-            <i className="fa-solid fa-magnifying-glass"></i>
+            {/* <i className="fa-solid fa-magnifying-glass"></i> */}
+            Enroll Now
           </button>
         </div>
       </div>

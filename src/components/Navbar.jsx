@@ -21,8 +21,39 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle('no-scroll', sidebarOpen);
-    return () => document.body.classList.remove('no-scroll');
+    const mediaQuery = window.matchMedia('(min-width: 56.25em)');
+    const handleResize = (e) => {
+      if (e.matches) {
+        setSidebarOpen(false);
+      }
+    };
+    
+    // Initial check
+    if (mediaQuery.matches) setSidebarOpen(false);
+
+    mediaQuery.addEventListener('change', handleResize);
+    return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!sidebarOpen) return;
+
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+
+    const preventDefault = (e) => {
+      if (!e.target.closest('.sidebar')) {
+        if (e.cancelable) e.preventDefault();
+      }
+    };
+
+    document.addEventListener('touchmove', preventDefault, { passive: false })
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
+      document.removeEventListener('touchmove', preventDefault);
+    }
   }, [sidebarOpen]);
 
   const closeSidebar = () => setSidebarOpen(false);
@@ -31,9 +62,9 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="navbar__inner container">
-          <a href="#home" className="navbar__logo" onClick={closeSidebar}>
+          <a href="#home" className="navbar__logo">
             <i className="fa-solid fa-steering-wheel navbar__logo-icon"></i>
-            <span className="navbar__logo-text">DRIVE</span>
+            <span className="navbar__logo-text">iLEARN</span>
           </a>
 
           <ul className="navbar__links">
@@ -66,6 +97,13 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <aside className={`sidebar${sidebarOpen ? ' sidebar--open' : ''}`}>
+        <button
+          className="sidenav__close"
+          onClick={closeSidebar}
+          aria-label="Close navigation menu"
+        >
+          ✕
+        </button>
         <ul className="sidebar__links">
           {navLinks.map((link) => (
             <li key={link.href}>

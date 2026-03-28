@@ -43,7 +43,7 @@ const packages = [
 
 export default function Pricing() {
   return (
-    <section className="pricing" id="pricing">
+    <section className="pricing reveal" id="pricing">
       <div className="pricing__inner container">
         <p className="pricing__label">Choose Your Plan</p>
         <h2 className="pricing__heading">Our Most Valuable Pricing Packages</h2>

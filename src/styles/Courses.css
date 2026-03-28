@@ -1,7 +1,7 @@
 /* ===== COURSES ===== */
 .courses {
   padding: clamp(4rem, 8vh, 7rem) 0;
-  background-color: var(--clr-white);
+  background-color: var(--clr-dark);
 }
 
 .courses__label {
@@ -16,7 +16,7 @@
   text-align: center;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: var(--clr-dark);
+  color: var(--clr-white);
   margin-bottom: clamp(2.5rem, 5vh, 4rem);
 }
 
@@ -37,9 +37,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.courses__card:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.14);
+@media (hover: hover) {
+  .courses__card:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.14);
+  }
 }
 
 .courses__card--featured {
@@ -61,8 +63,10 @@
   transition: transform 0.4s ease;
 }
 
-.courses__card:hover .courses__card-img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .courses__card:hover .courses__card-img {
+    transform: scale(1.05);
+  }
 }
 
 .courses__card-category {
@@ -123,8 +127,10 @@
   transition: background-color 0.3s ease;
 }
 
-.courses__card-btn:hover {
-  background-color: var(--clr-primary);
+@media (hover: hover) {
+  .courses__card-btn:hover {
+    background-color: var(--clr-primary);
+  }
 }
 
 /* ===== RESPONSIVE ===== */
