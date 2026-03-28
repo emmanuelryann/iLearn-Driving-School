@@ -1,0 +1,104 @@
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  background-color: var(--clr-light);
+}
+
+.testimonials__label {
+  text-align: center;
+  color: var(--clr-primary);
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.3rem, 0.6vh, 0.5rem);
+}
+
+.testimonials__title {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
+}
+
+.testimonials__grid {
+  display: flex;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonials__card {
+  flex: 1 1 18rem;
+  max-width: min(100%, 22rem);
+  background: var(--clr-white);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials__card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.testimonials__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: clamp(0.8rem, 1.5vh, 1.2rem);
+}
+
+.testimonials__avatar {
+  width: clamp(3rem, 4.5vw, 3.8rem);
+  height: clamp(3rem, 4.5vw, 3.8rem);
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonials__card-info {
+  flex: 1;
+}
+
+.testimonials__card-name {
+  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+  font-weight: 600;
+  color: var(--clr-dark);
+}
+
+.testimonials__card-role {
+  font-size: clamp(0.72rem, 0.9vw, 0.82rem);
+  color: var(--clr-gray);
+}
+
+.testimonials__quote-icon {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: var(--clr-primary);
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.testimonials__stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: clamp(0.6rem, 1vh, 1rem);
+}
+
+.testimonials__stars i {
+  font-size: clamp(0.72rem, 0.9vw, 0.85rem);
+  color: #f5a623;
+}
+
+.testimonials__card-text {
+  font-size: clamp(0.82rem, 1vw, 0.92rem);
+  color: var(--clr-gray);
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 48em) {
+  .testimonials__card {
+    max-width: 100%;
+  }
+}

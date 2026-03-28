@@ -1,0 +1,81 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --clr-primary: #f7941d;
+  --clr-primary-dark: #e0850f;
+  --clr-dark: #1a1a2e;
+  --clr-dark-2: #16213e;
+  --clr-dark-3: #0f3460;
+  --clr-white: #ffffff;
+  --clr-light: #f8f9fa;
+  --clr-gray: #6c757d;
+  --clr-gray-light: #e9ecef;
+  --clr-text: #333333;
+  --clr-text-light: #adb5bd;
+
+  --ff-primary: 'Poppins', sans-serif;
+}
+
+/* ===== GLOBAL RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+}
+
+input,
+select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* ===== UTILITY ===== */
+.container {
+  width: min(90%, 75rem);
+  margin-inline: auto;
+}

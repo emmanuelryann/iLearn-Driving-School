@@ -1,0 +1,112 @@
+/* ===== BLOG ===== */
+.blog {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  background-color: var(--clr-white);
+}
+
+.blog__label {
+  text-align: center;
+  color: var(--clr-primary);
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.3rem, 0.6vh, 0.5rem);
+}
+
+.blog__heading {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
+}
+
+.blog__grid {
+  display: flex;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog__card {
+  flex: 1 1 18rem;
+  max-width: min(100%, 22rem);
+  background: var(--clr-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog__card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.blog__card-img-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.blog__card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog__card:hover .blog__card-img {
+  transform: scale(1.05);
+}
+
+.blog__card-body {
+  padding: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.blog__card-meta {
+  display: flex;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+  margin-bottom: clamp(0.5rem, 1vh, 0.8rem);
+  color: var(--clr-gray);
+  font-size: clamp(0.7rem, 0.85vw, 0.78rem);
+}
+
+.blog__card-meta i {
+  margin-right: 0.25rem;
+  color: var(--clr-primary);
+}
+
+.blog__card-title {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: clamp(0.4rem, 0.8vh, 0.6rem);
+  line-height: 1.4;
+}
+
+.blog__card-excerpt {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  color: var(--clr-gray);
+  line-height: 1.7;
+  margin-bottom: clamp(0.8rem, 1.5vh, 1.2rem);
+}
+
+.blog__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: clamp(0.82rem, 1vw, 0.92rem);
+  font-weight: 600;
+  color: var(--clr-primary);
+  transition: gap 0.3s ease;
+}
+
+.blog__card-link:hover {
+  gap: 0.6rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 48em) {
+  .blog__card {
+    max-width: 100%;
+  }
+}

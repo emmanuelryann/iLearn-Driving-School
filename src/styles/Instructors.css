@@ -1,0 +1,115 @@
+/* ===== INSTRUCTORS ===== */
+.instructors {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  background-color: var(--clr-light);
+}
+
+.instructors__label {
+  text-align: center;
+  color: var(--clr-primary);
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.3rem, 0.6vh, 0.5rem);
+}
+
+.instructors__title {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
+}
+
+.instructors__grid {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.instructors__card {
+  flex: 1 1 16rem;
+  max-width: min(100%, 20rem);
+  background: var(--clr-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instructors__card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.instructors__card-img-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.instructors__card-img {
+  width: 100%;
+  aspect-ratio: 3 / 3.5;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.instructors__card:hover .instructors__card-img {
+  transform: scale(1.05);
+}
+
+.instructors__card-body {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.instructors__card-name {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: clamp(0.15rem, 0.3vh, 0.25rem);
+}
+
+.instructors__card-title {
+  font-size: clamp(0.78rem, 1vw, 0.88rem);
+  color: var(--clr-gray);
+  margin-bottom: clamp(0.6rem, 1vh, 1rem);
+}
+
+.instructors__card-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.instructors__card-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2rem, 3vw, 2.5rem);
+  height: clamp(2rem, 3vw, 2.5rem);
+  border-radius: 50%;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.instructors__card-socials a:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 48em) {
+  .instructors__card {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 48.0625em) and (max-width: 64em) {
+  .instructors__card {
+    flex-basis: calc(50% - 1.5rem);
+  }
+}
