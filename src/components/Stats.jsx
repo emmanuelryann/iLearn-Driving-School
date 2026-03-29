@@ -9,7 +9,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="stats">
+    <section className="stats reveal">
       <div className="stats__inner container">
         {stats.map((stat) => (
           <div className="stats__item" key={stat.label}>

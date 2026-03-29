@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import '../styles/Navbar.css';
 
 const navLinks = [
@@ -15,10 +15,14 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', onScroll);
+    const onScroll = () => {
+      if (!sidebarOpen) {
+        setScrolled(window.scrollY > 50);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [sidebarOpen]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(min-width: 56.25em)');
@@ -35,28 +39,72 @@ export default function Navbar() {
     return () => mediaQuery.removeEventListener('change', handleResize);
   }, []);
 
+  // useEffect(() => {
+  //   if (!sidebarOpen) return;
+
+  //   document.body.classList.add('no-scroll');
+  //   document.documentElement.classList.add('no-scroll');
+
+  //   const preventDefault = (e) => {
+  //     if (!e.target.closest('.sidebar')) {
+  //       if (e.cancelable) e.preventDefault();
+  //     }
+  //   };
+
+  //   document.addEventListener('touchmove', preventDefault, { passive: false })
+
+  //   return () => {
+  //     document.body.classList.remove('no-scroll');
+  //     document.documentElement.classList.remove('no-scroll');
+  //     document.removeEventListener('touchmove', preventDefault);
+  //   }
+  // }, [sidebarOpen]);
+
   useEffect(() => {
-    if (!sidebarOpen) return;
-
-    document.body.classList.add('no-scroll');
-    document.documentElement.classList.add('no-scroll');
-
-    const preventDefault = (e) => {
-      if (!e.target.closest('.sidebar')) {
-        if (e.cancelable) e.preventDefault();
+    const handleTouchMove = (e) => {
+      if (sidebarOpen) {
+        e.preventDefault();
       }
     };
 
-    document.addEventListener('touchmove', preventDefault, { passive: false })
+    if (sidebarOpen) {
+      window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    }
 
     return () => {
-      document.body.classList.remove('no-scroll');
-      document.documentElement.classList.remove('no-scroll');
-      document.removeEventListener('touchmove', preventDefault);
-    }
+      window.removeEventListener('touchmove', handleTouchMove);
+    };
   }, [sidebarOpen]);
 
-  const closeSidebar = () => setSidebarOpen(false);
+  const openSidebar = useCallback(() => {
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+    setSidebarOpen(true);
+  }, []);
+
+  // const closeSidebar = () => setSidebarOpen(false);
+
+  const closeSidebar = useCallback(() => {
+    const scrollY = document.body.style.top;
+    
+    // Disable smooth scroll temporarily for instant restoration
+    document.documentElement.style.scrollBehavior = 'auto';
+    
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    
+    // Re-enable smooth scroll after restoration
+    setTimeout(() => {
+      document.documentElement.style.scrollBehavior = '';
+    }, 0);
+    
+    setSidebarOpen(false);
+  }, []);
 
   return (
     <>
@@ -79,7 +127,8 @@ export default function Navbar() {
 
           <button
             className={`navbar__hamburger${sidebarOpen ? ' navbar__hamburger--open' : ''}`}
-            onClick={() => setSidebarOpen((prev) => !prev)}
+            onClick={sidebarOpen ? closeSidebar : openSidebar}
+            // onClick={() => setSidebarOpen(prev => !prev)}
             aria-label="Toggle menu"
           >
             <span></span>

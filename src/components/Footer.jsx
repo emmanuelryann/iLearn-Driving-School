@@ -16,7 +16,7 @@ const supportLinks = [
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer reveal">
       <div className="footer__inner container">
         <div className="footer__col footer__col--brand">
           <a href="#home" className="footer__logo">

@@ -2,7 +2,7 @@ import '../styles/Experience.css';
 
 export default function Experience() {
   return (
-    <section className="experience">
+    <section className="experience reveal">
       <div className="experience__overlay"></div>
       <div className="experience__inner container">
         <div className="experience__content">

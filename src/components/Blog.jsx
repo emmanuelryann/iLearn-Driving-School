@@ -26,7 +26,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section className="blog">
+    <section className="blog reveal">
       <div className="blog__inner container">
         <p className="blog__label">From Our Blog</p>
         <h2 className="blog__heading">Our Latest News &amp; Articles</h2>
