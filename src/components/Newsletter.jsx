@@ -10,7 +10,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="newsletter reveal">
+    <section className="newsletter">
       <div className="newsletter__overlay"></div>
       <div className="newsletter__inner container">
         <h2 className="newsletter__title">

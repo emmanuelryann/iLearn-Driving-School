@@ -30,7 +30,7 @@ const courses = [
 
 export default function Courses() {
   return (
-    <section className="courses reveal" id="courses">
+    <section className="courses" id="courses">
       <div className="courses__inner container">
         <p className="courses__label">Learn From The Best</p>
         <h2 className="courses__title">Our Popular Driving Courses</h2>

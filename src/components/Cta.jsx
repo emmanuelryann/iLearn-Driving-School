@@ -2,7 +2,7 @@ import '../styles/Cta.css';
 
 export default function Cta() {
   return (
-    <section className="cta reveal" id="contact">
+    <section className="cta" id="contact">
       <div className="cta__overlay"></div>
       <div className="cta__inner container">
         <div className="cta__badge">

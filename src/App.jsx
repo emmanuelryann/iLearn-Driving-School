@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,28 +16,28 @@ import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
 function App() {
-  useEffect(() => {
-    const observerCallback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    };
+  // useEffect(() => {
+  //   const observerCallback = (entries, observer) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('active');
+  //         observer.unobserve(entry.target);
+  //       }
+  //     });
+  //   };
 
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+  //   const observerOptions = {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0.1
+  //   };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
+  //   const observer = new IntersectionObserver(observerCallback, observerOptions);
+  //   const revealElements = document.querySelectorAll('.reveal');
+  //   revealElements.forEach(el => observer.observe(el));
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <div className="app">

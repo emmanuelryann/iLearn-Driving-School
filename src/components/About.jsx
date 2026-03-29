@@ -2,7 +2,7 @@ import '../styles/About.css';
 
 export default function About() {
   return (
-    <section className="about reveal" id="about">
+    <section className="about" id="about">
       <div className="about__inner container">
         <div className="about__image-wrapper">
           <img

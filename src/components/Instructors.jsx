@@ -20,7 +20,7 @@ const instructors = [
 
 export default function Instructors() {
   return (
-    <section className="instructors reveal" id="instructors">
+    <section className="instructors" id="instructors">
       <div className="instructors__inner container">
         <p className="instructors__label">Our Team</p>
         <h2 className="instructors__title">Meet Our Qualified Instructors</h2>

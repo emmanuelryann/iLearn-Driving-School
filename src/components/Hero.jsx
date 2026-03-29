@@ -2,7 +2,7 @@ import '../styles/Hero.css';
 
 export default function Hero() {
   return (
-    <section className="hero reveal" id="home">
+    <section className="hero" id="home">
       <div className="hero__overlay"></div>
       <div className="hero__content container">
         <p className="hero__subtitle">&mdash; Improve Your Driving Skills</p>
