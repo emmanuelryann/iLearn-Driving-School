@@ -54,7 +54,7 @@
   color: var(--clr-white);
   border-color: var(--clr-primary);
   transform: scale(1.05);
-  box-shadow: 0 0.5rem 2.5rem rgba(247, 148, 29, 0.35);
+  box-shadow: 0 0.5rem 2.5rem rgba(139, 69, 59, 0.6);
 }
 
 @media (hover: hover) {
@@ -174,11 +174,5 @@
 
   .pricing__card--highlighted {
     transform: none;
-  }
-
-  @media (hover: hover) {
-    .pricing__card--highlighted:hover {
-      transform: translateY(-0.4rem);
-    }
   }
 }

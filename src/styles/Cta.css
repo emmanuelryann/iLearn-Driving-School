@@ -2,14 +2,15 @@
 .cta {
   position: relative;
   padding: clamp(4rem, 10vh, 8rem) 0;
-  background: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1920&q=80') center/cover no-repeat;
+  background: url('https://t3.ftcdn.net/jpg/06/80/59/60/240_F_680596033_hFEu7ezGwDyeHUH85i52hlwNwPCmS4yO.jpg') center/cover no-repeat;
   text-align: center;
 }
 
 .cta__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(247, 148, 29, 0.92) 0%, rgba(224, 133, 15, 0.95) 100%);
+  /* background: linear-gradient(135deg, rgba(247, 148, 29, 0.92) 0%, rgba(224, 133, 15, 0.95) 100%); */
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 

@@ -2,18 +2,18 @@ import '../styles/Instructors.css';
 
 const instructors = [
   {
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80',
-    name: 'Paul Marton',
+    image: 'https://media.istockphoto.com/id/2214889528/photo/smiling-businessman-walking-in-the-office-holding-a-laptop.jpg?s=1024x1024&w=is&k=20&c=sq4nDRtIgJ93pjYY7Vh_umgxFWUH1vJyvYA-cJwb0v4=',
+    name: 'Paul Kweku',
     title: 'Senior Instructor',
   },
   {
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80',
-    name: 'Alpha Lubis',
+    image: 'https://images.pexels.com/photos/5060805/pexels-photo-5060805.jpeg',
+    name: 'Angelo Kwesi',
     title: 'Lead Instructor',
   },
   {
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80',
-    name: 'Mark Chris',
+    image: 'https://images.pexels.com/photos/33091826/pexels-photo-33091826.jpeg',
+    name: 'Blessing Mensah',
     title: 'Driving Coach',
   },
 ];

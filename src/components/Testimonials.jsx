@@ -2,23 +2,23 @@ import '../styles/Testimonials.css';
 
 const testimonials = [
   {
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D',
     text: 'The instructors were incredibly patient and professional. I passed my driving test on the first attempt thanks to the comprehensive training I received here.',
-    name: 'John Peterson',
+    name: 'John Banks',
     role: 'Student',
     rating: 5,
   },
   {
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+    image: 'https://images.pexels.com/photos/4531837/pexels-photo-4531837.jpeg',
     text: 'Best driving school in the area! The defensive driving course gave me so much confidence on the road. I highly recommend their programs to everyone.',
     name: 'Sarah Williams',
     role: 'Graduate',
     rating: 5,
   },
   {
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    image: 'https://images.pexels.com/photos/7109089/pexels-photo-7109089.jpeg',
     text: 'Flexible scheduling and affordable packages made learning to drive stress-free. The modern vehicles and up-to-date curriculum were a huge plus.',
-    name: 'Michael Chen',
+    name: 'Michael David',
     role: 'Student',
     rating: 5,
   },

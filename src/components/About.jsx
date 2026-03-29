@@ -6,7 +6,7 @@ export default function About() {
       <div className="about__inner container">
         <div className="about__image-wrapper">
           <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+            src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepYga3mtfsPOJ-_rnruvNxqLYDb7yViH_E4bvzRkjrKUM1AK-25fZrf6lfem7mafcIu9R2HPKlA-xeYbUiztaFdJ2uuIzNK7uYObH-J6W2q94vs6vP0Bt8yAoPgaAWN1PsqjIQV=s1360-w1360-h1020-rw"
             alt="Driving lesson in progress"
             className="about__image"
           />
@@ -19,7 +19,7 @@ export default function About() {
         <div className="about__content">
           <p className="about__label">About Us</p>
           <h2 className="about__title">
-            Drive Best Driving School In The World
+            Best Driving School In Ghana
           </h2>
           <p className="about__text">
             We offer comprehensive driving courses tailored for every skill level. 

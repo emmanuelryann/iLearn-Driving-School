@@ -44,10 +44,10 @@
   }
 }
 
-.courses__card--featured {
+/* .courses__card--featured {
   box-shadow: 0 0.5rem 2rem rgba(247, 148, 29, 0.2);
   border: 0.125rem solid var(--clr-primary);
-}
+} */
 
 .courses__card-img-wrap {
   position: relative;

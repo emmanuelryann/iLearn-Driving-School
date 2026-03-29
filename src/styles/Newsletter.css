@@ -2,14 +2,15 @@
 .newsletter {
   position: relative;
   padding: clamp(3.5rem, 7vh, 6rem) 0;
-  background: url('https://images.unsplash.com/photo-1617650728468-8583b1b3c1e9?w=1920&q=80') center/cover no-repeat;
+  background: url('https://t3.ftcdn.net/jpg/03/66/01/02/240_F_366010270_xRbOr7GtlF3XaUvb0cuIoHEoqRh2OPoC.jpg') center/cover no-repeat;
   text-align: center;
 }
 
 .newsletter__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(247, 148, 29, 0.93) 0%, rgba(224, 133, 15, 0.96) 100%);
+  /* background: linear-gradient(135deg, rgba(247, 148, 29, 0.93) 0%, rgba(224, 133, 15, 0.96) 100%); */
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 

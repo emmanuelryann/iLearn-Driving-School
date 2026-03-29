@@ -3,7 +3,7 @@ import '../styles/Pricing.css';
 const packages = [
   {
     name: 'Basic Package',
-    price: '75',
+    price: '220',
     features: [
       '10 Driving Lessons',
       'Classroom Theory Sessions',
@@ -15,7 +15,7 @@ const packages = [
   },
   {
     name: 'Standard Package',
-    price: '95',
+    price: '450',
     features: [
       '20 Driving Lessons',
       'Advanced Theory Sessions',
@@ -28,7 +28,7 @@ const packages = [
   },
   {
     name: 'Executive Package',
-    price: '125',
+    price: '680',
     features: [
       '30 Driving Lessons',
       'Full Theory Curriculum',
@@ -56,7 +56,7 @@ export default function Pricing() {
             >
               <p className="pricing__card-name">{pkg.name}</p>
               <div className="pricing__card-price">
-                <span className="pricing__currency">$</span>
+                <span className="pricing__currency">₵</span>
                 <span className="pricing__amount">{pkg.price}</span>
                 <span className="pricing__period">/month</span>
               </div>

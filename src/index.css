@@ -1,8 +1,9 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-  --clr-primary: #f7941d;
-  /* --clr-primary-dark: #e0850f; */
-  --clr-primary-dark: #d5851c;
+  /* --clr-primary: #f7941d; */
+  --clr-primary: #8b453b;
+  /* --clr-primary-dark: #d5851c; */
+  --clr-primary-dark: #a35d52dd;
   --clr-dark: #1a1a2e;
   /* --clr-dark-2: #16213e; */
   --clr-dark-2: #263356;
