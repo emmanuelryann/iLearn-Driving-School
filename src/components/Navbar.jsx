@@ -14,6 +14,7 @@ export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Scrolled indicator
   useEffect(() => {
     const onScroll = () => {
       if (!sidebarOpen) {
@@ -24,6 +25,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, [sidebarOpen]);
 
+  
+  // Close sidenav on screen resize
   useEffect(() => {
     const mediaQuery = window.matchMedia('(min-width: 56.25em)');
     const handleResize = (e) => {
@@ -37,6 +40,56 @@ export default function Navbar() {
 
     mediaQuery.addEventListener('change', handleResize);
     return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
+
+
+  // Disable scroll on sidenav
+  useEffect(() => {
+    const handleTouchMove = (e) => {
+      if (sidebarOpen) {
+        e.preventDefault();
+      }
+    };
+
+    if (sidebarOpen) {
+      window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    }
+
+    return () => {
+      window.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, [sidebarOpen]);
+
+
+  // Open sidenav
+  const openSidebar = useCallback(() => {
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+    setSidebarOpen(true);
+  }, []);
+
+
+  // Close sidenav
+  const closeSidebar = useCallback(() => {
+    const scrollY = document.body.style.top;
+    
+    // Disable smooth scroll temporarily for instant restoration
+    document.documentElement.style.scrollBehavior = 'auto';
+    
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    
+    // Re-enable smooth scroll after restoration
+    setTimeout(() => {
+      document.documentElement.style.scrollBehavior = '';
+    }, 0);
+    
+    setSidebarOpen(false);
   }, []);
 
   // useEffect(() => {
@@ -60,51 +113,7 @@ export default function Navbar() {
   //   }
   // }, [sidebarOpen]);
 
-  useEffect(() => {
-    const handleTouchMove = (e) => {
-      if (sidebarOpen) {
-        e.preventDefault();
-      }
-    };
-
-    if (sidebarOpen) {
-      window.addEventListener('touchmove', handleTouchMove, { passive: false });
-    }
-
-    return () => {
-      window.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [sidebarOpen]);
-
-  const openSidebar = useCallback(() => {
-    const scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
-    setSidebarOpen(true);
-  }, []);
-
   // const closeSidebar = () => setSidebarOpen(false);
-
-  const closeSidebar = useCallback(() => {
-    const scrollY = document.body.style.top;
-    
-    // Disable smooth scroll temporarily for instant restoration
-    document.documentElement.style.scrollBehavior = 'auto';
-    
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    
-    // Re-enable smooth scroll after restoration
-    setTimeout(() => {
-      document.documentElement.style.scrollBehavior = '';
-    }, 0);
-    
-    setSidebarOpen(false);
-  }, []);
 
   return (
     <>
@@ -128,7 +137,6 @@ export default function Navbar() {
           <button
             className={`navbar__hamburger${sidebarOpen ? ' navbar__hamburger--open' : ''}`}
             onClick={sidebarOpen ? closeSidebar : openSidebar}
-            // onClick={() => setSidebarOpen(prev => !prev)}
             aria-label="Toggle menu"
           >
             <span></span>
